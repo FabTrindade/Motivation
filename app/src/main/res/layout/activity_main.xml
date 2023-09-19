@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linear_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:accessibilityPaneTitle="Motivation"
@@ -39,13 +40,22 @@
     </LinearLayout>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_menu"
+        android:layout_marginTop="32dp"
+        android:textSize="18dp"
+        android:text="Hello Kotlin!"
+        android:layout_centerHorizontal="true"/>
+ 
+    <TextView
         android:id="@+id/phrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:gravity="center"
         android:padding="16dp"
-        android:text="Olá Kotlin!"
+        android:text="Motivation Motivation"
         android:textColor="@color/black"
         android:textSize="18dp">
         
