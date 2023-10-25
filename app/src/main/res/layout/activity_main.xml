@@ -14,7 +14,10 @@
         android:accessibilityPaneTitle="Motivation"
         android:background="@color/purple"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
         android:textAlignment="center">
 
         <ImageView
