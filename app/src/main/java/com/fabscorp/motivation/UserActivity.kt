@@ -1,5 +1,6 @@
 package com.fabscorp.motivation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,6 +29,8 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         val name = bidding.editName.text.toString()
 
         if (name != "") {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish() //To destroy UserActivity
         } else {
             Toast.makeText(this, R.string.validation_mandatory_name, Toast.LENGTH_SHORT).show()
         }
