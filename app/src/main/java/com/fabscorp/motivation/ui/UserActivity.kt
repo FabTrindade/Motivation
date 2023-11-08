@@ -1,10 +1,13 @@
-package com.fabscorp.motivation
+package com.fabscorp.motivation.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.fabscorp.motivation.infra.MotivationConstants
+import com.fabscorp.motivation.R
+import com.fabscorp.motivation.infra.SecurityPreferences
 import com.fabscorp.motivation.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {

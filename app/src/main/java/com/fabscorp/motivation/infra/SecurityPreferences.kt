@@ -1,4 +1,4 @@
-package com.fabscorp.motivation
+package com.fabscorp.motivation.infra
 
 import android.app.Instrumentation
 import android.content.Context

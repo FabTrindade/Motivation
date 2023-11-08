@@ -1,4 +1,4 @@
-package com.fabscorp.motivation
+package com.fabscorp.motivation.infra
 
 class MotivationConstants private constructor(){ //No one can instantiate this class
 
