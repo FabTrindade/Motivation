@@ -20,6 +20,17 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
         bidding.buttonSave.setOnClickListener(this)
         supportActionBar?.hide()
+
+        verifyUserName()
+    }
+
+    private fun verifyUserName() {
+        val name =  SecurityPreferences (this).getString(MotivationConstants.KEY.USER_NAME)
+        if (name != ""){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish() //To destroy UserActivity
+        }
+
     }
 
     override fun onClick(v: View) {
