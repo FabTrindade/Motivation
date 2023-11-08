@@ -29,6 +29,9 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         val name = bidding.editName.text.toString()
 
         if (name != "") {
+
+            SecurityPreferences(this).storeString("USER_NAME", name)
+
             startActivity(Intent(this, MainActivity::class.java))
             finish() //To destroy UserActivity
         } else {
