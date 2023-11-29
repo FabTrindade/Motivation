@@ -20,17 +20,6 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
         bidding.buttonSave.setOnClickListener(this)
         supportActionBar?.hide()
-
-        verifyUserName()
-    }
-
-    private fun verifyUserName() {
-        val name =  SecurityPreferences (this).getString(MotivationConstants.KEY.USER_NAME)
-        if (name != ""){
-            startActivity(Intent(this, MainActivity::class.java))
-            finish() //To destroy UserActivity
-        }
-
     }
 
     override fun onClick(v: View) {
@@ -43,10 +32,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         val name = bidding.editName.text.toString()
 
         if (name != "") {
-
             SecurityPreferences(this).storeString(MotivationConstants.KEY.USER_NAME, name)
-
-            startActivity(Intent(this, MainActivity::class.java))
             finish() //To destroy UserActivity
         } else {
             Toast.makeText(this, R.string.validation_mandatory_name, Toast.LENGTH_SHORT).show()
