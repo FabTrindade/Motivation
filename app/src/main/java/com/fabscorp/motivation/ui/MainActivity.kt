@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         supportActionBar?.hide()
 
-        handleUserName()
         listHandle(R.id.image_all)
 
         handleNextPhrase()
@@ -36,7 +35,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun handleUserName() {
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showUserName()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
+
+    private fun showUserName() {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
         binding.textUserName.text = "Olá, $name!"
     }
