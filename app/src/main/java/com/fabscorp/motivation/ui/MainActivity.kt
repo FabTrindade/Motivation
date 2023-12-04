@@ -10,6 +10,7 @@ import com.fabscorp.motivation.R
 import com.fabscorp.motivation.data.Mock
 import com.fabscorp.motivation.infra.SecurityPreferences
 import com.fabscorp.motivation.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -73,7 +74,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleNextPhrase() {
-        val phrase = Mock().getPhrase(categoryId)
+        val phrase = Mock().getPhrase(categoryId, Locale.getDefault().language)
         binding.phrase.text = phrase
     }
 
